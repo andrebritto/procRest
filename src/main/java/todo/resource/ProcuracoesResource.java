@@ -14,8 +14,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import todo.business.SistemaBC;
 import todo.dao.ProcuracaoDAO;
 import todo.dao.TodoDao;
+import todo.model.Sistema;
 import todo.model.Todo;
 
 /**
@@ -23,18 +25,28 @@ import todo.model.Todo;
  *         http://localhost:8080/procRest/procuracoes/68281455500/19007809334
  * 
  */
-@Path("/procuracoes")
+@Path("/")
 public class ProcuracoesResource {
 
 	@GET
-	@Path("{titular}/{procurador}")
+	@Path("/procuracoes/{titular}/{procurador}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<String> getProcuracoes(@PathParam("titular") String ni_titular,
-			@PathParam("procurador") String ni_procurador) {
-		return ProcuracaoDAO.getInstance().getProcuracao(ni_titular,
-				ni_procurador);
+	public List<String> getProcuracoes(
+			@PathParam("titular") String ni_titular,
+			@PathParam("procurador") String ni_procurador) 
+			{
+		return ProcuracaoDAO.getInstance().getProcuracao(ni_titular,ni_procurador);
 	}
-
+	
+	@GET
+	@Path("/sistemas")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Sistema> getSistemas()			 
+			{
+		
+		return SistemaBC.getInstance().getSistemas();
+	}
+	
 	
 	@GET
 	@Path("{id}")

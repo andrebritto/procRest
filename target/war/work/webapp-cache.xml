@@ -16,13 +16,17 @@
           <string>partial/detail.html</string>
           <string>partial/list.html</string>
           <string>WEB-INF/web.xml</string>
+          <string>WEB-INF/classes/todo/model/Procuracao.class</string>
           <string>WEB-INF/classes/todo/model/Todo.class</string>
+          <string>WEB-INF/classes/todo/model/Sistema.class</string>
+          <string>WEB-INF/classes/todo/business/SistemaBC.class</string>
           <string>WEB-INF/classes/todo/resource/ApplicationConfig.class</string>
           <string>WEB-INF/classes/todo/resource/ProcuracoesResource.class</string>
           <string>WEB-INF/classes/todo/resource/TodoResource.class</string>
           <string>WEB-INF/classes/todo/dao/GPDAO.class</string>
           <string>WEB-INF/classes/todo/dao/TodoDao.class</string>
           <string>WEB-INF/classes/todo/dao/TodoDao$1.class</string>
+          <string>WEB-INF/classes/todo/dao/SistemaDAO.class</string>
           <string>WEB-INF/classes/todo/dao/ProcuracaoDAO.class</string>
           <string>WEB-INF/classes/todo/dao/TodoDao$2.class</string>
           <string>WEB-INF/lib/jersey-server-1.17.1.jar</string>

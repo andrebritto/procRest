@@ -1,10 +1,8 @@
 package todo.dao;
 
 import java.util.ArrayList;
-import javax.inject.Inject;
 
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
+import javax.inject.Inject;
 public class SistemaDAO {
 	
 	private static SistemaDAO instance = null;
@@ -17,27 +15,50 @@ public class SistemaDAO {
 	GPDAO gpdao;
 	
 	
-	public static SistemaDAO getInstance() {
+	public static SistemaDAO getInstance() {		
 		if (instance == null) {
 			instance = new SistemaDAO();
 		}
 		return instance;
 	}
-
 	
 
-	public ArrayList<String> getSistemas() {
-		ArrayList<String> retArr = new ArrayList<String>();
+	public ArrayList<ArrayList> getSistemas() {
+		ArrayList<ArrayList> retArr = new ArrayList<ArrayList>();
 
 		try {
 			gpdao = GPDAO.getInstance();
-			retArr = gpdao.execQuery("SELECT AA AB AC AE FROM 047.182 WHERE AA>0 ORDER AA");
-
+			retArr = gpdao.execQuery("SELECT ISN AA AB AC AE FROM 047.182 WHERE AA>0 ORDER AA");
+			
+			
+			for (ArrayList<String> procs : retArr) {
+				for (String proc : procs) {
+					System.out.println("->" + proc);				
+				}
+				
+			
+			}
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return retArr;
+	}
+	
+	public ArrayList<String> getSistema(String codigo) {
+		ArrayList<String> ret = new ArrayList<String>(); 
+
+		try {
+			gpdao = GPDAO.getInstance();
+			ArrayList<ArrayList> retArr = gpdao.execQuery("SELECT ISN AA AB AC AE FROM 047.182 WHERE AA=" + codigo);			
+			ret = retArr.get(0);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
 	}
 	
 	

@@ -36,7 +36,8 @@ public class ProcuracaoDAO {
 	 */
 	public ArrayList<String> getProcuracao(String ni_titular,
 			String ni_procurador) {
-		ArrayList<String> retArr = new ArrayList<String>();
+		ArrayList<String> retorno = new ArrayList<String>();
+		ArrayList<ArrayList> retArr = new ArrayList<ArrayList>();
 		StringBuilder sb = new StringBuilder();
 		sb.append("SELECT ISN AA AC AE AG AI ");
 		sb.append("AK001 AK002 AK003 AK004 AK005 AK006 AK007 AK008 AK009 AK010 ");
@@ -51,11 +52,19 @@ public class ProcuracaoDAO {
 			gpdao = GPDAO.getInstance();
 			retArr = gpdao.execQuery(sb.toString());
 			
+			for (ArrayList<String> procs : retArr) {
+				for (String proc : procs) {
+					System.out.println("->" + proc);				
+				}
+				
+			
+			}
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return retArr;
+		return retorno;
 	}
 
 

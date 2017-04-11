@@ -51,32 +51,49 @@ public class GPDAO {
 		return instance;
 	}
 
-	protected ArrayList<String> exec(String comando) throws Exception {
+	protected ArrayList<ArrayList> exec(String comando) throws Exception {
 		int codigoConexao = -1;
 
 		String retorno = null, codRetorno = null;
 		ArrayList<String> ret = new ArrayList<String>();
-
+		ArrayList resultado = new ArrayList<String>();
 		try {
 
 			codigoConexao = abrirConexao();
 			System.out.println("CodConn: " + codigoConexao);
 
 			int valorRetornoComando = sqlada.SACommand(codigoConexao, comando);
-			System.out.println("valorRetornoComando: " + valorRetornoComando);
-			String strArea = StringUtils.trim(sqlada.strArea);
+			String strArea = "";
+//			System.out.println("Retorno: " + sqlada.strArea);
+			strArea = sqlada.strArea.replace(",U", "#U");
+//			System.out.println(strArea);
+			strArea = strArea.replace(",A", "#A");
+//			System.out.println(strArea);
+			
+			strArea = StringUtils.trim(strArea);			
 			int strAreaLength = StringUtils.length(strArea);
-
+			
+			 
+			String[] arrStrArea = strArea.split(",");
+			ArrayList<String> arrLengthArea = new ArrayList<String>();
+			for (String string : arrStrArea) {
+				if(string.contains("#")){								
+					arrLengthArea.add(string.split("#")[0]);					
+				}
+			}
 			if (valorRetornoComando < 0) {
 				// exibe o código de erro e a mensagem retornadas do grande
 				// porte ao executar comando
-				System.out
-						.println("error[" + comando + "]" + sqlada.strMsgErro);
+				System.out.println("error[" + comando + "]" + sqlada.strMsgErro);
 			}
 			int volta = 0;
 			int codErroNext = 0;
+			ArrayList registro = new ArrayList<String>();
+			
 			for (int i = 0; i < valorRetornoComando; i++) {
 				codErroNext = sqlada.SAGetNext(codigoConexao);
+				registro = getEntity(sqlada.strArea,arrLengthArea);
+				resultado.add(registro);
 				if (codErroNext < 0) {
 					throw (new Exception("Erro ao buscar proximo"));
 				} else {
@@ -91,9 +108,21 @@ public class GPDAO {
 		} finally {
 			fecharConexao(codigoConexao);
 		}
-		return ret;
+		return resultado;
 	}
 
+	public ArrayList<String> getEntity(String entrada, ArrayList<String> tams){
+		int passo=0;
+		int tamanho=0;
+		ArrayList<String> ret = new ArrayList<String>();
+		for (String tam : tams) {
+			tamanho = Integer.parseInt(tam);
+			ret.add(entrada.substring(passo,passo+tamanho));			
+			passo = passo + tamanho;
+		}
+		return ret;
+	}
+	
 	/**
 	 * Abre a conexão com o MainFrame
 	 * 
@@ -104,8 +133,7 @@ public class GPDAO {
 
 		int iCon = 0;
 		try {
-			iCon = sqlada.SAConnect("00000000191", "PR0CURAC0ES34624",
-					"PROCURACOES-D", "10.3.9.1:3001");
+			iCon = sqlada.SAConnect("00000000191", "PR0CURAC0ES34624","PROCURACOES-D", "10.3.9.1:3001");
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -152,7 +180,7 @@ public class GPDAO {
 
 	}
 
-	public ArrayList<String> execQuery(String qry) throws Exception {
+	public ArrayList<ArrayList> execQuery(String qry) throws Exception {
 		System.out.println("Query: " + qry);
 		return exec(qry);
 	}
@@ -171,8 +199,8 @@ public class GPDAO {
 	// return comandoGP;
 	// }
 
-	public ArrayList<String> getSistemas() {
-		ArrayList<String> retArr = new ArrayList<String>();
+	public ArrayList<ArrayList> getSistemas() {
+		ArrayList<ArrayList> retArr = new ArrayList<ArrayList>();
 
 		try {
 			retArr = execQuery("SELECT AA AB AC AE FROM 047.182 WHERE AA>0 ORDER AA");
@@ -194,9 +222,9 @@ public class GPDAO {
 	 * S4=(NR-CPF-NR-CPF-CNPJ-PROCURADOR_2
 	 * ,NR-CPF-CNPJ-TITULAR_2,DT-INICIO-VIGENCIA_2,HR-INICIO-VIGENCIA_2)
 	 */
-	public ArrayList<String> getProcuracao(String ni_titular,
+	public ArrayList<ArrayList> getProcuracao(String ni_titular,
 			String ni_procurador) {
-		ArrayList<String> retArr = new ArrayList<String>();
+		ArrayList<ArrayList> retArr = new ArrayList<ArrayList>();
 		StringBuilder sb = new StringBuilder();
 		sb.append("SELECT ISN AA AC AE AG AI AK001 AK002 AK003 AK004 AK005 AK006 AK007 AK008 AK009 AK010 ");
 		sb.append("AK011 AK012 AK013 AK014 AK015 AK016 AK017 AK018 AK019 AK020 AK021 AK022 AK023 AK024 ");
@@ -223,10 +251,13 @@ public class GPDAO {
 	
 	public static void main(String[] args) {
 		GPDAO gp = GPDAO.getInstance();
-		ArrayList<String> arr = new ArrayList<String>();
+		ArrayList<ArrayList> arr = new ArrayList<ArrayList>();
 		arr = gp.getProcuracao("68281455500", "19007809334");
-		for (String procs : arr) {
-			System.out.println("->" + procs);
+		for (ArrayList<String> procs : arr) {
+			for (String proc : procs) {
+				System.out.println("->" + proc);				
+			}
+			
 		
 		}
 		
