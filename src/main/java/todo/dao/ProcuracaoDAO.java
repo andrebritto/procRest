@@ -24,21 +24,22 @@ public class ProcuracaoDAO {
 	
 	
 	
-	/*
-	 * SELECT ISN AA AC AE AG AI AK001 AK002 AK003 AK004 AK005 AK006 AK007 AK008
-	 * AK009 AK010 AK011 AK012 AK013 AK014 AK015 AK016 AK017 AK018 AK019 AK020
-	 * AK021 AK022 AK023 AK024 AK025 AK026 AK027 AK028 AK029 AK030 AK031 FROM
-	 * 147.185 WHERE
-	 * S4=(NR-CPF-NR-CPF-CNPJ-PROCURADOR_1,NR-CPF-CNPJ-TITULAR_1,DT
-	 * -INICIO-VIGENCIA_1,HR-INICIO-VIGENCIA_1) TO
-	 * S4=(NR-CPF-NR-CPF-CNPJ-PROCURADOR_2
-	 * ,NR-CPF-CNPJ-TITULAR_2,DT-INICIO-VIGENCIA_2,HR-INICIO-VIGENCIA_2)
-	 */
-	public ArrayList<String> getProcuracao(String ni_titular,
+	
+//	  SELECT ISN AA AC AE AG AI AK001 AK002 AK003 AK004 AK005 AK006 AK007 AK008
+//	  AK009 AK010 AK011 AK012 AK013 AK014 AK015 AK016 AK017 AK018 AK019 AK020
+//	  AK021 AK022 AK023 AK024 AK025 AK026 AK027 AK028 AK029 AK030 AK031 FROM
+//	  147.185 WHERE
+//	  S4=(NR-CPF-NR-CPF-CNPJ-PROCURADOR_1,NR-CPF-CNPJ-TITULAR_1,DT
+//	  -INICIO-VIGENCIA_1,HR-INICIO-VIGENCIA_1) TO
+//	  S4=(NR-CPF-NR-CPF-CNPJ-PROCURADOR_2
+//	  ,NR-CPF-CNPJ-TITULAR_2,DT-INICIO-VIGENCIA_2,HR-INICIO-VIGENCIA_2)
+	 
+	public ArrayList<ArrayList> getProcuracao(String ni_titular,
 			String ni_procurador) {
 		ArrayList<String> retorno = new ArrayList<String>();
 		ArrayList<ArrayList> retArr = new ArrayList<ArrayList>();
 		StringBuilder sb = new StringBuilder();
+		
 		sb.append("SELECT ISN AA AC AE AG AI ");
 		sb.append("AK001 AK002 AK003 AK004 AK005 AK006 AK007 AK008 AK009 AK010 ");
 		sb.append("AK011 AK012 AK013 AK014 AK015 AK016 AK017 AK018 AK019 AK020 AK021 AK022 AK023 AK024 ");
@@ -52,22 +53,23 @@ public class ProcuracaoDAO {
 			gpdao = GPDAO.getInstance();
 			retArr = gpdao.execQuery(sb.toString());
 			
-			for (ArrayList<String> procs : retArr) {
-				for (String proc : procs) {
-					System.out.println("->" + proc);				
-				}
-				
-			
-			}
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return retorno;
+		return retArr;
 	}
 
 
+//	public static void main(String[] args) {
+//		ArrayList<ArrayList> procs = ProcuracaoDAO.getInstance().getProcuracao("68281455500","19007809334");
+//		for (ArrayList<String> proc : procs) {
+//			for (String campo : proc) {
+//				System.out.println(campo);
+//			}
+//		}
+//	}
 
 
 	/*

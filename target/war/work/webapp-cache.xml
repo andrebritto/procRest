@@ -20,6 +20,7 @@
           <string>WEB-INF/classes/todo/model/Todo.class</string>
           <string>WEB-INF/classes/todo/model/Sistema.class</string>
           <string>WEB-INF/classes/todo/business/SistemaBC.class</string>
+          <string>WEB-INF/classes/todo/business/ProcuracaoBC.class</string>
           <string>WEB-INF/classes/todo/resource/ApplicationConfig.class</string>
           <string>WEB-INF/classes/todo/resource/ProcuracoesResource.class</string>
           <string>WEB-INF/classes/todo/resource/TodoResource.class</string>

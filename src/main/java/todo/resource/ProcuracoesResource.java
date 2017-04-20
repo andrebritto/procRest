@@ -3,6 +3,7 @@
  */
 package todo.resource;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.DELETE;
@@ -14,9 +15,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import todo.business.ProcuracaoBC;
 import todo.business.SistemaBC;
-import todo.dao.ProcuracaoDAO;
 import todo.dao.TodoDao;
+import todo.model.Procuracao;
 import todo.model.Sistema;
 import todo.model.Todo;
 
@@ -31,11 +33,11 @@ public class ProcuracoesResource {
 	@GET
 	@Path("/procuracoes/{titular}/{procurador}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<String> getProcuracoes(
+	public ArrayList<Procuracao> getProcuracoes(
 			@PathParam("titular") String ni_titular,
 			@PathParam("procurador") String ni_procurador) 
 			{
-		return ProcuracaoDAO.getInstance().getProcuracao(ni_titular,ni_procurador);
+		return ProcuracaoBC.getInstance().getProcuracoes(ni_titular,ni_procurador);
 	}
 	
 	@GET

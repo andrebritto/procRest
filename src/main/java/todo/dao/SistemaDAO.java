@@ -30,14 +30,14 @@ public class SistemaDAO {
 			gpdao = GPDAO.getInstance();
 			retArr = gpdao.execQuery("SELECT ISN AA AB AC AE FROM 047.182 WHERE AA>0 ORDER AA");
 			
-			
-			for (ArrayList<String> procs : retArr) {
-				for (String proc : procs) {
-					System.out.println("->" + proc);				
-				}
-				
-			
-			}
+//			
+//			for (ArrayList<String> procs : retArr) {
+//				for (String proc : procs) {
+//					System.out.println("->" + proc);				
+//				}
+//				
+//			
+//			}
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -61,7 +61,9 @@ public class SistemaDAO {
 		return ret;
 	}
 	
-	
+//	public static void main(String[] args) {
+//		ArrayList<ArrayList> sistemas = SistemaDAO.getInstance().getSistemas();
+//	}
 	/*
 	 * 	Codigo de controle		procurador			vigencia
 	 * 	9A2FA.0DE9F.CDFD5.AF1E8	190.078.093-34	30/12/2016 - 01/01/2017

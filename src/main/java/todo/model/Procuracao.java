@@ -3,20 +3,21 @@ package todo.model;
 import java.util.ArrayList;
 
 public class Procuracao {
-	private double isn;
+	private String isn;
 	private String niTitular;
 	private String niProcurador;
 	private String dataInicioVigencia;
 	private String dataFimVigencia;
 	private String horaInicioVigencia;
 	private String horaFimVigencia;
+	private String situacao;
 	private ArrayList<Sistema> sistemas;
 	
 	
-	public double getIsn() {
+	public String getIsn() {
 		return isn;
 	}
-	public void setIsn(double isn) {
+	public void setIsn(String isn) {
 		this.isn = isn;
 	}
 	public String getNiTitular() {
@@ -68,8 +69,15 @@ public class Procuracao {
 				+ ", niProcurador=" + niProcurador + ", dataInicioVigencia="
 				+ dataInicioVigencia + ", dataFimVigencia=" + dataFimVigencia
 				+ ", horaInicioVigencia=" + horaInicioVigencia
-				+ ", horaFimVigencia=" + horaFimVigencia + ", sistemas="
+				+ ", horaFimVigencia=" + horaFimVigencia + ", situacao="
+						+ situacao + ", sistemas="
 				+ sistemas + "]";
+	}
+	public String getSituacao() {
+		return situacao;
+	}
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
 	}
 	
 }

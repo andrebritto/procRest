@@ -104,7 +104,7 @@ public class GPDAO {
 
 			codRetorno = StringUtils.right(strArea, 2);
 			retorno = strArea;
-
+			
 		} finally {
 			fecharConexao(codigoConexao);
 		}
@@ -114,12 +114,21 @@ public class GPDAO {
 	public ArrayList<String> getEntity(String entrada, ArrayList<String> tams){
 		int passo=0;
 		int tamanho=0;
+		String campo = "";
 		ArrayList<String> ret = new ArrayList<String>();
 		for (String tam : tams) {
 			tamanho = Integer.parseInt(tam);
-			ret.add(entrada.substring(passo,passo+tamanho));			
+			campo = entrada.substring(passo,passo+tamanho).replace("+", "");
+			if (!campo.equals("00000")){
+				ret.add(campo);
+			}			
 			passo = passo + tamanho;
 		}
+		
+//		for (String string : ret) {
+//			System.out.println("Campo: " + string);
+//		}
+		
 		return ret;
 	}
 	
