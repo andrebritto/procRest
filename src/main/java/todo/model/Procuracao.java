@@ -11,8 +11,13 @@ public class Procuracao {
 	private String horaInicioVigencia;
 	private String horaFimVigencia;
 	private String situacao;
+	private String origem;
+	private String tipoNiTitular;
+	private String tipoNiProcurado;
 	private ArrayList<Sistema> sistemas;
 	
+	static final String ECAC = "e-CAC";
+	static final String RFB = "Receita Federal";
 	
 	public String getIsn() {
 		return isn;
@@ -69,7 +74,8 @@ public class Procuracao {
 				+ ", niProcurador=" + niProcurador + ", dataInicioVigencia="
 				+ dataInicioVigencia + ", dataFimVigencia=" + dataFimVigencia
 				+ ", horaInicioVigencia=" + horaInicioVigencia
-				+ ", horaFimVigencia=" + horaFimVigencia + ", situacao="
+				+ ", horaFimVigencia=" + horaFimVigencia + ", origem="
+						+ origem + ", situacao="
 						+ situacao + ", sistemas="
 				+ sistemas + "]";
 	}
@@ -79,5 +85,33 @@ public class Procuracao {
 	public void setSituacao(String situacao) {
 		this.situacao = situacao;
 	}
+	public String getOrigem() {
+		
+		if("1".equals(origem)){
+			return ECAC ;	
+		}else if ("0".equals(origem)){
+			return RFB ;	
+		} else{
+			return "Origem invalida[" + origem + "]" ;
+		}
+		
+		
+	}
+	public void setOrigem(String origem) {
+		this.origem = origem;
+	}
+	public String getTipoNiTitular() {
+		return tipoNiTitular;
+	}
+	public void setTipoNiTitular(String tipoNiTitular) {
+		this.tipoNiTitular = tipoNiTitular;
+	}
+	public String getTipoNiProcurado() {
+		return tipoNiProcurado;
+	}
+	public void setTipoNiProcurado(String tipoNiProcurado) {
+		this.tipoNiProcurado = tipoNiProcurado;
+	}
+	
 	
 }

@@ -60,7 +60,7 @@ public class GPDAO {
 		try {
 
 			codigoConexao = abrirConexao();
-			System.out.println("CodConn: " + codigoConexao);
+			
 
 			int valorRetornoComando = sqlada.SACommand(codigoConexao, comando);
 			String strArea = "";
@@ -190,7 +190,6 @@ public class GPDAO {
 	}
 
 	public ArrayList<ArrayList> execQuery(String qry) throws Exception {
-		System.out.println("Query: " + qry);
 		return exec(qry);
 	}
 

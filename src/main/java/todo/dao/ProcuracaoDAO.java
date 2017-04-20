@@ -3,6 +3,10 @@ package todo.dao;
 import java.util.ArrayList;
 
 import javax.inject.Inject;
+
+import todo.business.SistemaBC;
+import todo.model.Procuracao;
+import todo.model.Sistema;
 public class ProcuracaoDAO {
 	
 	private static ProcuracaoDAO instance = null;
@@ -40,7 +44,7 @@ public class ProcuracaoDAO {
 		ArrayList<ArrayList> retArr = new ArrayList<ArrayList>();
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("SELECT ISN AA AC AE AG AI ");
+		sb.append("SELECT ISN AA AC AE AG AI AS ");
 		sb.append("AK001 AK002 AK003 AK004 AK005 AK006 AK007 AK008 AK009 AK010 ");
 		sb.append("AK011 AK012 AK013 AK014 AK015 AK016 AK017 AK018 AK019 AK020 AK021 AK022 AK023 AK024 ");
 		sb.append("AK025 AK026 AK027 AK028 AK029 AK030 AK031 ");
@@ -61,7 +65,51 @@ public class ProcuracaoDAO {
 		return retArr;
 	}
 
+	public void criarProcuracao(Procuracao proc){
+		String AK = ProcuracaoDAO.getInstance().getCamposSistemas(proc.getSistemas());
+		String sSQL = "INSERT 047.185 AA='" + proc.getNiTitular()+ "' AB='" + proc.getTipoNiTitular()+ "' AC='" + proc.getNiProcurador() + "' AD='" + proc.getTipoNiProcurado() + "' AE='" + proc.getDataInicioVigencia()+ "' AF='000001' AG='" + proc.getDataFimVigencia() + "' AH=00000000 AI='A' AJ='teste123@serpro.gov.br' " + AK  + " AP=000000 AS=0";
+		System.out.println("SQL: " + sSQL);
+	}
 
+	private String getCamposSistemas(ArrayList<Sistema> sistemas) {
+		
+		StringBuilder sb = new StringBuilder();
+		String nome="";
+		int i=0;
+		for (Sistema sistema : sistemas) {
+			nome = "AK" + String.format("%3s",++i ).replace(' ', '0');
+			sb.append(String.format("%1s",nome )).append("=").append(sistema.getCodigo()).append(" ");			
+		}
+		
+		return sb.toString();
+	}
+
+	public static void main(String[] args) {
+		
+		SistemaBC sistemabc = SistemaBC.getInstance();
+		ArrayList<Sistema> sistemas = new ArrayList<Sistema>();
+		Procuracao procuracao = new Procuracao();		
+		procuracao.setDataFimVigencia("20180505");
+		procuracao.setDataInicioVigencia("20170505");
+		procuracao.setNiProcurador("81275714587");
+		procuracao.setTipoNiProcurado("1");
+		procuracao.setTipoNiTitular("1");
+		procuracao.setNiTitular("19007809334");
+		
+		sistemas.add(sistemabc.getSistema("00001"));				
+		sistemas.add(sistemabc.getSistema("00002"));
+		sistemas.add(sistemabc.getSistema("00003"));
+		sistemas.add(sistemabc.getSistema("00120"));
+		procuracao.setSistemas(sistemas);
+		
+		ProcuracaoDAO.getInstance().criarProcuracao(procuracao);
+		
+		
+			
+		
+		
+	}
+	
 //	public static void main(String[] args) {
 //		ArrayList<ArrayList> procs = ProcuracaoDAO.getInstance().getProcuracao("68281455500","19007809334");
 //		for (ArrayList<String> proc : procs) {
