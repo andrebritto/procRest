@@ -1,0 +1,147 @@
++0000000001+00001RECEITANET          Transmissão de Declarações/Arquivos, inclusive todos do CNPJ, com Assinatura Digital via Receitanet +3
++0000000004+00002SITFIS              Situação Fiscal do Contribuinte                                                                     +3
++0000000002+00003DECWEB              Cópia de Declaração                                                                                 +3
++0000000005+00004PAGTOWEB            Pagamentos - Comprovante de Arrecadação                                                             +3
++0000000003+00005REDARFNET           Pagamentos - Retificação de Documento de Arrecadação - Redarf Net                                   +3
++0000000050+00006CXPOSTAL            Caixa Postal - Mensagens                                                                            +3
++0000000007+00007PARCWEB             Parcelamento de Débitos                                                                             +3
++0000000008+00008SMV                 Sistema de Medição de Vazão                                                                         +2
++0000000010+00009INT                 Sief Cobrança - Intimações DCTF                                                                     +2
++0000000022+00010RECOB               RECOB - Regime Especial de Apuração e Pagamento da Contribuição para o PIS/PASEP e COFINS           +2
++0000000006+00011DIRPF               Declarações - DIRPF                                                                                 +1
++0000000011+00012DIRF                Declarações - DIRF (Acesso ao conteúdo da declaração, extrato e 2a via do recibo)                   +3
++0000000012+00013DIPJ                Declarações - DIPJ/PJ Simplificada (Acesso ao conteúdo da declaração, extrato e 2a via do recibo)   +2
++0000000009+00014DCTF                Declarações - DCTF (Acesso ao conteúdo da declaração, extrato e 2a via do recibo)                   +2
++0000000013+00015CADCPF              Cadastro CPF - Consulta                                                                             +1
++0000000015+00016CADCPF              Cadastro CPF - Complementar Dados                                                                   +1
++0000000016+00017CADCPF              Cadastro CPF - Alterar Endereço                                                                     +1
++0000000014+00018CADCNPJ             Cadastro CNPJ                                                                                       +2
++0000000017+00019DSPJ-INATIVAS 2007  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2007                            +2
++0000000018+00020Selos - IPI         Selos - IPI                                                                                         +2
++0000000019+00021FONTESPAG           Fontes Pagadoras                                                                                    +3
++0000000021+00023DSPJ-INATIVAS 2008  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2008                            +2
++0000000023+00024SAGA                Agendamento do SAGA                                                                                 +3
++0000000024+00025PERDCOMPD           Consulta Despacho Decisório PER/DCOMP                                                               +3
++0000000025+00026EDMOV               E-DMOV - Declaração Aduaneira de Movimentação Física de Valores                                     +2
++0000000026+00027HSPED               HSPED - Habilitação de Usuários no SPED                                                             +1
++0000000027+00028SNDECLARACAO        Simples Nacional - Declaração do Simples Nacional - 2007 e 2008                                     +2
++0000000028+00029SNCONSDECTRANS      Simples Nacional - Consulta Declaração Transmitida                                                  +2
++0000000029+00030EXCLUSAOSN          Simples Nacional - Exclusão do Simples Nacional                                                     +2
++0000000030+00031SOLOPCAOSN          Simples Nacional - Solicitação de Opção                                                             +2
++0000000031+00032ACOMPTOSN           Simples Nacional - Acompanhamento Opção                                                             +2
++0000000032+00033SNGERDOCARREC       Simples Nacional - Gerador de Documento de Arrecadação                                              +2
++0000000033+00034CONSDEBSIVEX        Simples Nacional - Consulta Débitos Sivex                                                           +2
++0000000034+00035DSPJ-INATIVAS 2009  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2009                            +2
++0000000035+00036REFRI-TERMO         Refri - Termo de Opção                                                                              +2
++0000000036+00037SPED                Assinatura da Escrituração Fiscal Digital - EFD ICMS IPI                                            +3
++0000000037+00038SISCOSERV           SISCOSERV - Sistema Integrado de Comércio Exterior de Serviços                                      +3
++0000000038+00039PARCELALEI          Parcelamento Especial - Opções da Lei 11.941/2009                                                   +3
++0000000039+00040DOWNSPEDCONTABIL    Download da Escrituração Contábil Digital (SPED-ECD) utilizando o Receitanet Bx                     +2
++0000000040+00041DOWNSPEDCONTABAGREG Download dos arquivos SPED Dados Agregados e Termos da ECD utilizando o ReceitanetBx                +3
++0000000041+00042PESSOACONTATO       Contribuinte Diferenciado - Pessoas de Contato                                                      +2
++0000000042+00043DSPJ-INATIVAS 2010  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2010                            +2
++0000000043+00044PGFNCONSDEB         Aplicações PGFN - Consulta de Débitos                                                               +3
++0000000044+00045PGFNCONSREQ         Aplicações PGFN - Consulta de Requerimentos                                                         +3
++0000000045+00046PGFNEXCLDEVEDOR     PGFN - Consulta Débitos inscritos a partir de 01/11/2012                                            +3
++0000000046+00047PGFNPARCSIMPLIFI    PGF - Consulta Débitos inscritos a partir de 01/11/2012                                             +3
++0000000047+00048DOWNSPEDEFD         Download da Escrituração Fiscal Digital (SPED-EFD) utilizando o Receitanet Bx                       +2
++0000000048+00049FCONT               Recuperação de Ajustes/Saldos do Controle Fiscal Contábil de Transição (FCONT)                      +3
++0000000049+00050TERMODOMICILIO      Caixa Postal - Termo de Opção pelo Domicílio Tributário Eletrônico                                  +3
++0000000051+00051EPROCESSO           Processos Digitais                                                                                  +3
++0000000052+00052LEILAOELETRONICO    Sistema de Leilão Eletrônico                                                                        +3
++0000000053+00053DCIDE               Formulário Dcide-Combustíveis                                                                       +2
++0000000054+00054DMED                Declarações - Dmed (Extrato)                                                                        +2
++0000000055+00055BLOQUEIOIRPF        Opção de Impressão do IRPF                                                                          +1
++0000000056+00056CONSSITPEDIDO       Cadastro CNPJ - Consulta Situação do Pedido                                                         +2
++0000000057+00057DSPJ-INATIVAS 2011  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2011                            +2
++0000000058+00058MATRICULACEI        Matrícula CEI                                                                                       +3
++0000000063+00059SIMPNACAGENDOP      Simples Nacional - Agendamento de Opção                                                             +2
++0000000064+00060SIMPNACOPREGAPREC   Simples Nacional - Opção pelo Regime de Apuração de Receitas                                        +2
++0000000065+00061SIMPNACCANSOLOP     Simples Nacional - Cancelamento da Solicitação da Opção                                             +2
++0000000066+00062SIMPNACCANAGENDOP   Simples Nacional - Cancelamento do Agendamento da Opção                                             +2
++0000000067+00063SISPREV             Situação Fiscal Previdenciária                                                                      +3
++0000000059+00064EMAC                Contribuinte Diferenciado - e-MAC (Sistema de Comunicação Eletrônica)                               +2
++0000000060+00065PEDPARC             Pedido de Parcelamento Previdenciário                                                               +3
++0000000061+00066CONEXTPARC          Consulta Extrato de Parcelamento Previdenciário                                                     +3
++0000000062+00067CONSITPARC          Consulta Situação e Recibo de Parcelamento Previdenciário                                           +3
++0000000068+00068REIMPDARF           Reimpressão de Darf de primeira parcela do Parcelamento Previdenciário                              +3
++0000000069+00069DONWSPEDF           Download do Controle Fiscal Contábil de Transição (SPED-FCONT) utilizando o Receitanet Bx           +2
++0000000070+00070DIVAT-U             Débitos Inscritos em Dívida Ativa da União desde 11/2013                                            +3
++0000000071+00071DIVAT-PGF           Débitos Inscritos em Dívida Ativa (PGF) desde 11/2013                                               +3
++0000000072+00072DOWNEFDPISCOF       Download de EFD-PIS/Cofins através do ReceitaNetBX                                                  +3
++0000000073+00073INTDCTF             Intimação DCTF                                                                                      +2
++0000000074+00074CPAD                Contribuinte Diferenciado - Consulta Participação no Acompanhamento Diferenciado                    +2
++0000000075+00075DSPJ-INATIVAS 2012  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2012                            +2
++0000000020+00076SIMPLESNACPARC      Parcelamento de Débitos do Simples Nacional                                                         +2
++0000000077+00077NOTGFIP             Notificações em Auditoria de Compensação em GFIP                                                    +2
++0000000078+00078PARCPREVI           Parcelamento Simplificado Previdenciário                                                            +3
++0000000079+00079SIMPNACPGDASD       Simples Nacional - PGDAS-D - a partir de 01/2012                                                    +2
++0000000080+00080SIMPNACEDAS         Simples Nacional - Emissão de DAS de Auto de Infração                                               +2
++0000000081+00081DSPJ-INATIVAS 2013  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2013                            +2
++0000000082+00082AT DBANC            Atualização de Dados Bancários                                                                      +3
++0000000083+00083COM COFICIO         Comunicação para Compensação de Ofício                                                              +3
++0000000084+00084DASPM               Emissão de DAS da Parcela Mínima                                                                    +2
++0000000085+00085PERDCOMPA           Consulta Análise Preliminar PER/DCOMP - Autorregularização                                          +3
++0000000086+00086PERDCOMPI           Consulta Intimação PER/DCOMP                                                                        +3
++0000000087+00087PERDCOMPP           Consulta Processamento PER/DCOMP                                                                    +3
++0000000088+00088ESICODEC            Notificações e Autos relativos à entrega de declarações                                             +3
++0000000089+00089CAEPF               CAEPF - Cadastro de Atividades Econômicas da Pessoa Física                                          +1
++0000000090+00090e-AssinaRFB         e-AssinaRFB                                                                                         +3
++0000000091+00091CNO                 CNO - Cadastro Nacional de Obras                                                                    +3
++0000000092+00092SERO                SERO - Serviço Eletrônico de Regularizações de Obras                                                +3
++0000000093+00093REPARCELALEI        Reabertura Pagamento e Parcelamento Lei nº 11.941/2009                                              +3
++0000000094+00094SIMPNACSMS          Simples Nacional - Alerta - Avisos e comunicações para o contribuinte                               +2
++0000000095+00095SIMPNACCOMP         Compensação a pedido do Simples Nacional                                                            +2
++0000000096+00096DSPJ-INATIVAS 2014  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2014                            +2
++0000000097+00097ESOCIAL             eSocial-Autenticação                                                                                +3
++0000000098+00098DIRPF-PREP          Declaração DIRPF Pré-Preenchida                                                                     +1
++0000000076+00100MF-PJ               Extrato Malha Fiscal Pessoa Jurídica                                                                +2
++0000000164+00101TESTE001            Consulta Pendências - Relatório Complementar de Situação Fiscal                                     +3
++0000000163+00102PARCELAMENTO12996   Pagamento e Parcelamento Lei nº 12.996/2014                                                         +3
++0000000162+00103DCTFWEB             DCTF WEB - Sistema de DCTF Previdenciária na Web                                                    +3
++0000000161+00104e-FINANCEIRA        e-Financeira                                                                                        +3
++0000000160+00105DSPJ-INATIVAS 2015  Declarações - Declaração Simplificada da Pessoa Jurídica - Inativas 2015                            +2
++0000000159+00106SIMPNACACFIS        Consulta Ação Fiscal do Simples Nacional                                                            +2
++0000000158+00107MIRPF               Declaração IRPF 2015 online                                                                         +1
++0000000157+00108ESOCIALPER          eSocial-Envio de Eventos-Periódicos                                                                 +3
++0000000156+00109ESOCIALNAOPER       eSocial-Envio de Eventos-Não Periódicos                                                             +3
++0000000155+00110ESOCIALSAU          eSocial-Envio de Eventos-Saúde e Segurança do Trabalhador                                           +3
++0000000154+00111SPEDECF             SPED-ECF (Escrituração Contábil Fiscal)                                                             +3
++0000000153+00112DOI                 DOI - Declarações sobre Operações Imobiliárias                                                      +1
++0000000152+00113SPEDECFDOWN         SPED-ECF-Download - Download via ReceitanetBX da Escrituração Contábil Fiscal                       +3
++0000000151+00114DAS-AVULSO          Emissão de DAS Avulso                                                                               +2
++0000000150+00115PARCPREVIDAU        Parcelamento Simplificado Previdenciário DAU                                                        +3
++0000000149+00116REDOM               Parcelamento dos Empregadores Domésticos                                                            +1
++0000000147+00118DERCAT              DERCAT - Declaração de Regularização Cambial e Tributária                                           +3
++0000000146+00119SIEF-SIC-MCT-21118  Aderir Modalidade de Parcelamento                                                                   +3
++0000000145+00120OBRIGACAO           Entregar Arquivo de Dados - Obrigação Acessória                                                     +2
++0000000144+00121INTIMACAO           Intimação Fiscal - Arquivo de Dados                                                                 +2
++0000000143+00122DARA                DARA - Débito Automático da Rede Arrecadadora                                                       +3
++0000000142+00123SISEN               SISEN - Sistema de Controle de Isenção de IPI e IOF                                                 +1
++0000000141+00124SPED-ECD            SPED-ECD (SPED-Contábil)                                                                            +3
++0000000140+00125PARCESPSN           Parcelamento Especial Simples Nacional                                                              +2
++0000000139+00126PROGREGTRIB         Programa de Regularização Tributária-Débitos Previdenciários                                        +3
++0000000138+00127PROGREGTRIBDD       Programa de Regularização Tributária-Demais Débitos                                                 +3
++0000000137+00128DESPARCANT          Desistência de Parcelamentos Anteriores                                                             +3
++0000000136+00129REINF-ESPECIAL      REINF-Especial                                                                                      +3
++0000000135+00130REINF-ROTINAS       REINF-Rotinas                                                                                       +3
++0000000134+00131REINF-RETORNO       REINF-Retorno                                                                                       +3
++0000000133+00132PERT                Acessar o Programa Especial de Regularização Tributária - PERT                                      +3
++0000000132+00133PARCMEIESP          Parcelamento Especial - Microempreendedor Individual                                                +2
++0000000131+00134PARCMEIORD          Parcelamento - Microempreendedor Individual                                                         +2
++0000000130+00135PEDELEREST          Pedido Eletrônico de Restituição (Simples e Simei)                                                  +2
++0000000129+00136eSocial             eSocial - Grupo Preliminar                                                                          +3
++0000000128+00137eSocial             eSocial - Grupo Rotinas                                                                             +3
++0000000127+00138eSocial             eSocial - Grupo SST                                                                                 +3
++0000000126+00139eSocial             eSocial - Grupo Desligamento                                                                        +3
++0000000125+00140eSocial             eSocial - Grupo Especial                                                                            +3
++0000000124+00141eSocial             eSocial - Grupo Retorno                                                                             +3
++0000000123+00142eSocial             eSocial - Grupo Acesso WEB                                                                          +3
++0000000103+00143PERDCOMPW           Acessar PER/DCOMP WEB                                                                               +3
++0000000104+00144PGMEI               PGMEI - Programa Gerador do MEI                                                                     +2
++0000000105+00145DME                 DME - Declaração de Operações Liquidadas com Moeda em Espécie                                       +3
++0000000106+00146SIMPNACPGDASD2018   PGDAS-D - a partir de 01/2018                                                                       +2
++0000000107+00147CONSRETFPEM         Consultar Retenções do FPEM                                                                         +2
++0000000100+00165DIVAT-U-TI          Débitos Inscritos em Dívida Ativa da União - Teste Integrado                                        +3
++0000000099+00166DIVAT-U-TF          Débitos Inscritos em Dívida Ativa da União - Teste Funcional                                        +3
++0000000101+00188PARCSN              Solicitar, acompanhar e emitir DAS de parcelamento                                                  +2

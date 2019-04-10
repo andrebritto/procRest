@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<File name="File" fileName="src/test/resource/log4j_reinf.log">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+		</File>
+		
+		<Http name="logstash" url="http://localhost:5000">
+			<JsonLayout properties="true" />
+		</Http>
+		
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="logstash" />
+			<AppenderRef ref="Console" />
+			<!-- <AppenderRef ref="File" /> -->
+		</Root>
+	</Loggers>
+</Configuration>
+
+
